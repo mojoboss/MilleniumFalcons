@@ -1,16 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.iOS;
 using UnityEngine;
+using Zenject;
 
-public class GameSceneViewModel : MonoBehaviour {
+public class GameSceneViewModel : MonoBehaviour
+{
+	[Inject(Id = "FalconShip0")] public Transform _FalconShip0;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	[Inject(Id = "FalconShip1")] public Transform _FalconShip1;
+
+	[Inject(Id = "FalconShip2")] public Transform _FalconShip2;
+
+	[Inject(Id = "FalconShip3")] public Transform _FalconShip3;
 }
