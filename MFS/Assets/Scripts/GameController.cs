@@ -15,6 +15,9 @@ public class GameController: IInitializable
     public void Initialize()
     {
         Debug.Log("Game controller initialize called");
+
+        _service.SetupGame();
+
         Observable.EveryUpdate().Where(_ => Input.GetKeyDown(KeyCode.LeftArrow))
             .Subscribe(_ =>
             {
