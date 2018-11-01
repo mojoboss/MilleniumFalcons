@@ -5,7 +5,7 @@ public class GameInstallers : MonoInstaller<GameInstallers>
 {
     public override void InstallBindings()
     {
-        Container.Bind<GameController>().AsSingle().NonLazy();
+        Container.BindInterfacesAndSelfTo<GameController>().AsSingle().NonLazy();
         Container.Bind<GameState>().AsSingle().NonLazy();
         Container.Bind<OfflineGameService>().AsSingle().NonLazy();
     }
